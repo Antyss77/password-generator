@@ -2,10 +2,6 @@
   <img src="https://user-images.githubusercontent.com/47704223/212773124-1baeff6b-c192-4c0a-b601-708205676ac2.png">
 </p> 
 
-
-![Fichier 5](https://user-images.githubusercontent.com/47704223/212773124-1baeff6b-c192-4c0a-b601-708205676ac2.png)
-
-
 # Password Generator  <img alt="GitHub issues" src="https://img.shields.io/github/issues/Antyss77/Mathematics-Simplifier"> <img alt="Discord" src="https://img.shields.io/discord/741862512307339264">
 
 
