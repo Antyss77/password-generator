@@ -3,7 +3,7 @@
 </p> 
 
 # Password Generator <img alt="Release" src="https://img.shields.io/github/v/release/Antyss77/passwordgenerator?logo=github"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Antyss77/Mathematics-Simplifier"> <img alt="Discord" src="https://img.shields.io/discord/741862512307339264"> 
-
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/Antyss77/password-generator/total?style=social">
 
  This project aims to provide a secure solution for creating strong and unique passwords.
 The generator takes into account different parameters such as the inclusion of uppercase letters, lowercase letters, special characters, and numbers in the password generation. Users can also define the desired length for their password.
