@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/47704223/212773124-1baeff6b-c192-4c0a-b601-708205676ac2.png">
 </p> 
 
-# Password Generator <img alt="Release" src="https://img.shields.io/github/downloads/Antyss77/password-generator/releases/tag/release/release/total"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Antyss77/Mathematics-Simplifier"> <img alt="Discord" src="https://img.shields.io/discord/741862512307339264"> 
+# Password Generator <img alt="Release" src="https://img.shields.io/github/downloads/Antyss77/password-generator/releases/tag/release/total"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/Antyss77/Mathematics-Simplifier"> <img alt="Discord" src="https://img.shields.io/discord/741862512307339264"> 
 
 
  This project aims to provide a secure solution for creating strong and unique passwords.
