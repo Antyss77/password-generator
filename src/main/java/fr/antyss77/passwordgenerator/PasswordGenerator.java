@@ -13,11 +13,10 @@ import javafx.stage.Stage;
 import java.util.Random;
 
 public class PasswordGenerator extends Application {
-
     private TextField passwordField = new TextField();
-    private CheckBox includeUppercase = new CheckBox("Inclure des majuscules");
-    private CheckBox includeNumbers = new CheckBox("Inclure des chiffres");
-    private CheckBox includeSymbols = new CheckBox("Inclure des symboles");
+    private CheckBox includeUppercase = new CheckBox("Include Uppercase");
+    private CheckBox includeNumbers = new CheckBox("Include Numbers");
+    private CheckBox includeSymbols = new CheckBox("Include Symbols");
     private int passwordLength = 8;
 
     public static void main(String[] args) {
@@ -26,43 +25,43 @@ public class PasswordGenerator extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Générateur de mot de passe");
+        primaryStage.setTitle("Password Generator v1.0.0");
 
         VBox root = new VBox(10);
         root.setPadding(new Insets(10));
         root.setAlignment(Pos.CENTER);
 
-        Label titleLabel = new Label("Générateur de mot de passe");
+        Label titleLabel = new Label("Password Generator");
         titleLabel.setStyle("-fx-font-size:24; -fx-font-weight:bold;");
 
-        Label lengthLabel = new Label("Longueur du mot de passe :");
+        Label lengthLabel = new Label("Password Length:");
 
         Spinner<Integer> lengthSpinner = new Spinner<>(8, 32, 16);
         lengthSpinner.setEditable(true);
 
-        CheckBox includeLowercase = new CheckBox("Inclure des minuscules");
+        CheckBox includeLowercase = new CheckBox("Include Lowercase");
         includeLowercase.setSelected(true);
 
-        CheckBox includeUppercase = new CheckBox("Inclure des majuscules");
+        CheckBox includeUppercase = new CheckBox("Include Uppercase");
         includeUppercase.setSelected(true);
 
-        CheckBox includeDigits = new CheckBox("Inclure des chiffres");
+        CheckBox includeDigits = new CheckBox("Include Numbers");
         includeDigits.setSelected(true);
 
-        CheckBox includeSpecial = new CheckBox("Inclure des caractères spéciaux");
+        CheckBox includeSpecial = new CheckBox("Include Special Characters");
         includeSpecial.setSelected(true);
 
-        passwordField.setPromptText("Générer un mot de passe");
+        passwordField.setPromptText("Generate a Password");
         passwordField.setEditable(false);
 
-        Button generateButton = new Button("Générer");
+        Button generateButton = new Button("Generate");
         generateButton.setOnAction(event -> {
             int length = lengthSpinner.getValue();
             String password = generatePassword(length, includeLowercase.isSelected(), includeUppercase.isSelected(), includeDigits.isSelected(), includeSpecial.isSelected());
             passwordField.setText(password);
         });
 
-        Button copyButton = new Button("Copier");
+        Button copyButton = new Button("Copy");
         copyButton.setOnAction(event -> {
             final Clipboard clipboard = Clipboard.getSystemClipboard();
             final ClipboardContent content = new ClipboardContent();
@@ -79,7 +78,6 @@ public class PasswordGenerator extends Application {
     private String generatePassword(int length, boolean includeLowercase, boolean includeUppercase, boolean includeDigits, boolean includeSpecial) {
         StringBuilder password = new StringBuilder();
         String validChars = "";
-
         if (includeLowercase) {
             validChars += "abcdefghijklmnopqrstuvwxyz";
         }
@@ -93,12 +91,14 @@ public class PasswordGenerator extends Application {
             validChars += "!@#$%^&*_=+-/";
         }
 
-        Random random = new Random();
-        for (int i = 0; i < length; i++) {
-            password.append(validChars.charAt(random.nextInt(validChars.length())));
+        Random rnd = new Random();
+
+        while (password.length() < length) {
+            int index = (int) (rnd.nextFloat() * validChars.length());
+            password.append(validChars.charAt(index));
         }
+
         return password.toString();
     }
 
 }
-
