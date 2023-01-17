@@ -17,8 +17,8 @@ The generator takes into account different parameters such as the inclusion of u
 **Compiling from source**
 
 ```
-git clone https://github.com/Antyss77/PasswordGenerator.git
-cd PasswordGenerator/ 
+git clone https://github.com/Antyss77/password-generator.git
+cd password-generator/ 
 ```
 
 ## Licence
