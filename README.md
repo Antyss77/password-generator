@@ -7,7 +7,7 @@
  This project aims to provide a secure solution for creating strong and unique passwords.
 The generator takes into account different parameters such as the inclusion of uppercase letters, lowercase letters, special characters, and numbers in the password generation. Users can also define the desired length for their password.
 
-I made the same project in C# language find it (here)[https://github.com/Antyss77/csharp-password-generator/]
+I made the same project in C# language find it [here](https://github.com/Antyss77/csharp-password-generator/)
 
 
 ## Building
